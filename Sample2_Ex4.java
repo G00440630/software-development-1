@@ -1,19 +1,26 @@
 import java.util.Scanner;
-public class Sample_Ex4 {
-    public static void main (String [] args){
+
+public class Exercise3 {
+    public static void main(String[] args) {
         Scanner input = new Scanner(System.in);
-        char symbol;
+        
+        System.out.print("Enter your age: ");
+        double age = input.nextDouble(); // Using double to allow decimal ages like 0.5
 
-        System.out.print("Enter Symbol: ");
-        symbol = input.next().charAt(0);
-
-        for(int row = 0; row < 4; row++){
-            for(int col = 1; col <= 5; col++){
-                System.out.print(symbol + " ");
-            }
-            System.out.println();
+        if (age < 0) {
+            System.out.println("Invalid age entered.");
+        } else if (age < 1) {
+            System.out.println("Baby");
+        } else if (age >= 1 && age < 4) {
+            System.out.println("Toddler");
+        } else if (age >= 4 && age < 13) {
+            System.out.println("Child");
+        } else if (age >= 13 && age < 20) {
+            System.out.println("Teenager");
+        } else if (age >= 20 && age < 65) {
+            System.out.println("Adult");
+        } else { // age >= 65
+            System.out.println("Senior Citizen");
         }
-
-        input.close();
     }
 }
