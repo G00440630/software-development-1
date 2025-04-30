@@ -4,7 +4,7 @@ public class Exercise2{
 
     
          for(int i = 0; i < x.length; i++){
-                if(x[i]%2 == 0){    
+                if( i % 2 == 0){    
             x[i] = x[i]+5;
             System.out.println("index update " + i + ": " + x[i]);
             }else{
